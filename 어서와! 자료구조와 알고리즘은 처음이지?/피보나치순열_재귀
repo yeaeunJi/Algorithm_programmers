@@ -1,0 +1,9 @@
+# recursive version
+def solution(x) :
+    # Fibonacci 순열에 해당하는 값 반환    
+    if x == 0 :
+        return 0
+    elif x == 1 :
+        return 1
+    else :
+        return solution(x-1) + solution(x-2)
