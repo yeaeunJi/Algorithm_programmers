@@ -1,0 +1,13 @@
+def solution(L, x):
+    answer = []
+
+    if not x in L :
+        return [-1]
+    
+    for idx, value in enumerate(L) :
+        if value == x :
+            answer.append(idx)
+        else :
+            continue
+            
+    return answer
