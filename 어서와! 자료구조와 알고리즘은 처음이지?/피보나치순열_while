@@ -1,0 +1,16 @@
+# iterative version
+def solution(x) :
+    # Fibonacci 순열에 해당하는 값 반환
+    before_1, before_2 = 1, 0  
+    now = 0 # 현재 값
+    
+    if x == 0 :
+            return 0
+    elif x == 1 :
+            return 1
+    else :    
+        while x-2 >= 0:
+            now = before_1 + before_2
+            before_1, before_2 = now, before_1
+            x -= 1
+    return now
