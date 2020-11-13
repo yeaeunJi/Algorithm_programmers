@@ -1,0 +1,27 @@
+def solution(L, x) :
+    # L은 중복값 없이 오름차순 정렬되어 있음
+    # not x in L : return [-1]
+    # x와 같은 같은 가지는 원소의 인덱스를 반환
+    
+    # 알고리즘의 효율성도 평가할 시 선형 탐색 알고리즘을 구현하는
+    # 경우에는 제한 시간 요구사항을 만족하지 못하여 효율성 테스트 통과 못할 수 있음
+    
+    # 정렬되어 있는 배열을 사용할 수 있으므로 이진 탐색 효율적임
+    
+    answer = []
+    
+    left = 0
+    right = len(L) - 1 
+    mid = -1 
+    
+    while left <= right :
+        mid = left + (right-left) // 2 
+        
+        if L[mid] == x :
+            return mid
+        elif L[mid] < x :
+            left = mid + 1
+        else : # L[mid] > x 
+            right = mid - 1            
+    
+    return -1
