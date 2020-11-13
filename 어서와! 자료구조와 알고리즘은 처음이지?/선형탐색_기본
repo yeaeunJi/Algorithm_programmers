@@ -1,0 +1,10 @@
+def linear_search(L, x) :
+  i = 0 #사용할 인덱스 초깃값
+  
+  while i < len(L) and L[i] != x : # 같은 값을 찾을 때까지 순환
+    i += 1
+   
+   if i < len(L) : # L안에서 X가 발견퇴었다면
+      return i
+   else : # L 안에서 x가 발견되지 않았다면
+      return -1 # -1을 반환
