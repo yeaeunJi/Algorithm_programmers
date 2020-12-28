@@ -1,0 +1,20 @@
+def solution(arr):
+    answer = []
+    temp_num = None
+    
+    while arr :
+        if temp_num is None:
+            temp_num = arr.pop()
+            answer.append(temp_num)
+        
+        if arr :
+            compare_num = arr.pop()
+            
+            if temp_num == compare_num :
+                continue
+            else :
+                temp_num = compare_num
+                answer.append(temp_num)
+                
+    answer.reverse()        
+    return answer
