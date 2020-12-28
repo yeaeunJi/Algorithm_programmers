@@ -1,0 +1,15 @@
+def solution(s):
+    lower_s = s.lower()
+    p_cnt = 0
+    y_cnt = 0
+    
+    if 'p' not in lower_s and 'y' not in lower_s:
+        return True
+
+    for char in lower_s :
+        if char == 'p' :
+            p_cnt += 1
+        elif char == 'y':
+            y_cnt += 1
+    
+    return True if p_cnt == y_cnt else False
