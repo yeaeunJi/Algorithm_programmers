@@ -1,0 +1,10 @@
+def solution(numbers):
+    answer = []
+    result_set = set()
+    for i in range(len(numbers)-1) :
+        for k in numbers[i+1:] :
+            result_set.add(numbers[i]+k)
+    
+    answer = list(result_set)
+    answer.sort()
+    return answer
